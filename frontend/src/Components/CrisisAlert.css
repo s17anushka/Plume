@@ -1,0 +1,70 @@
+.crisis-alert {
+  padding: 20px;
+  margin: 0;
+  border-bottom: 4px solid;
+  animation: urgentPulse 2s infinite;
+}
+
+@keyframes urgentPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.9; }
+}
+
+.crisis-alert.emergency {
+  background: linear-gradient(135deg, #fc8181 0%, #f56565 100%);
+  border-color: #c53030;
+  color: white;
+}
+
+.crisis-alert.severe {
+  background: linear-gradient(135deg, #feb2b2 0%, #fc8181 100%);
+  border-color: #f56565;
+  color: #742a2a;
+}
+
+.crisis-alert.elevated {
+  background: linear-gradient(135deg, #fbd38d 0%, #f6ad55 100%);
+  border-color: #dd6b20;
+  color: #7c2d12;
+}
+
+.alert-content h3 {
+  margin: 0 0 8px 0;
+  font-size: 1.2rem;
+}
+
+.alert-content p {
+  margin: 0 0 15px 0;
+}
+
+.alert-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.crisis-btn {
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.2s;
+}
+
+.crisis-btn:hover {
+  transform: scale(1.05);
+}
+
+.crisis-btn.primary {
+  background: white;
+  color: #c53030;
+}
+
+.crisis-btn.secondary {
+  background: rgba(255, 255, 255, 0.3);
+  color: white;
+  border: 2px solid white;
+}
