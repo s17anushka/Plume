@@ -9,7 +9,7 @@ function App() {
 
   const { instance, accounts } = useMsal();
 
-  const BACKEND_URL = "http://localhost:7071/api/chat";
+  const BACKEND_URL = "https://icy-sand-03ff8a300.2.azurestaticapps.net";
 
   const [conversations, setConversations] = useState([]);
   const [activeChat, setActiveChat] = useState(null);
