@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import "./App.css";
-import ChatMessage from "./components/ChatMessage.jsx";
-import LoadingIndicator from "./components/LoadingIndicator.jsx";
+import ChatMessage from "./components/ChatMessage";
+import LoadingIndicator from "./components/LoadingIndicator";
 import { useMsal } from "@azure/msal-react";
 import { loginRequest } from "./authConfig";
 
