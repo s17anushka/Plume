@@ -257,7 +257,7 @@ While Plume demonstrates a modular AI-assisted conversational system, the curren
   Conversation history is stored in browser local storage rather than a persistent database.
 
 - **Scalability not evaluated**  
-  The system has not yet been tested for large-scale usage or high concurrency.
+  The system has not yet been tested for large-scale usage or high concurrency plus my deployed live link was under free tier .
 
 Future work may address these limitations by improving model prompting, adding persistent storage, and expanding safety mechanisms.
 
