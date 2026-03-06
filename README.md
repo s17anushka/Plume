@@ -11,24 +11,24 @@ The application is deployed using Azure Static Web Apps with automated CI/CD thr
 ## Tech Stack
 
 ### Frontend
-- React 
-- Vite
-- CSS
+- React ![React](https://img.shields.io/badge/Frontend-React-blue)
+- Vite ![Vite](https://img.shields.io/badge/Build-Vite-646CFF)
+- CSS ![CSS](https://img.shields.io/badge/Style-CSS-blueviolet)
 
 ### Authentication
 - Microsoft Authentication Library (MSAL)
 - Microsoft Identity Platform
 
 ### Backend
-- Azure Functions (Serverless)
-- Python
+- Azure Functions (Serverless) ![Azure Functions](https://img.shields.io/badge/Backend-Azure%20Functions-green)
+- Python ![Python](https://img.shields.io/badge/Language-Python-yellow)
 
 ### AI Integration
-- Google Gemini API
+- Google Gemini API ![Gemini API](https://img.shields.io/badge/AI-Gemini%20API-purple)
 - Agent-based conversation orchestration
 
 ### Cloud Platform
-- Azure Static Web Apps
+- Azure Static Web Apps ![Azure Static Web Apps](https://img.shields.io/badge/Cloud-Azure%20Static%20Web%20Apps-0078D4)
 
 ### Storage
 - Browser Local Storage (conversation history)
@@ -186,7 +186,7 @@ Deployment pipeline:
 
 The project includes:
 
-- React chat interface
+- A Basic React chat interface
 - Microsoft authentication
 - Serverless backend with Azure Functions
 - Modular AI agent architecture
@@ -262,7 +262,8 @@ While Plume demonstrates a modular AI-assisted conversational system, the curren
 Future work may address these limitations by improving model prompting, adding persistent storage, and expanding safety mechanisms.
 
 ## Author
-**Anushka Singh**
-CSE Student
+**Anushka Singh**  
+
+ CSE Student
 
 
