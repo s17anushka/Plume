@@ -195,7 +195,23 @@ The project includes:
 - Automated cloud deployment pipeline
 
 ---
-## System Architecture
+## AI Processing Pipeline
+
+The backend includes a set of modular agent components that support the conversational workflow.  
+These modules help analyze user messages, maintain conversation context, and guide response generation.
+
+The agent modules include:
+
+- **Classifier** – analyzes the type or intent of the user message.
+- **Emotional Profile** – evaluates the emotional tone of the conversation.
+- **Crisis Engine** – detects potential crisis or high-risk signals.
+- **Memory Module** – maintains conversation context across messages.
+- **Mood Tracker** – tracks emotional trends over time within a conversation.
+- **Strategy Engine** – determines the appropriate response strategy.
+
+These modules are coordinated by an **orchestrator**, which prepares the prompt and sends the request to the **Gemini API** for response generation.
+
+The generated response is then returned to the frontend chat interface.
 
 ## System Architecture
 
@@ -217,7 +233,36 @@ AGENTS --> GEMINI[Gemini API]
 GEMINI --> RESP[AI Response]
 
 RESP --> FE
-''''
+----
+## Limitations
+
+While Plume demonstrates a modular AI-assisted conversational system, the current implementation has several limitations:
+
+- **Prototype-level system**  
+  The project is designed as a proof-of-concept and experimental architecture rather than a production-ready mental health platform.
+
+- **AI responses may be imperfect**  
+  Responses generated through the Gemini API may occasionally be inaccurate, overly generic, or contextually incomplete.
+
+- **Limited long-term memory**  
+  Conversation memory is currently maintained within the session and does not persist across long-term user histories.
+
+- **Crisis detection is heuristic-based**  
+  Crisis detection logic is experimental and should not be relied upon for real-world clinical decision-making.
+
+- **No professional medical validation**  
+  The system is not intended to replace professional mental health support or therapy.
+
+- **Frontend state persistence**  
+  Conversation history is stored in browser local storage rather than a persistent database.
+
+- **Scalability not evaluated**  
+  The system has not yet been tested for large-scale usage or high concurrency.
+
+Future work may address these limitations by improving model prompting, adding persistent storage, and expanding safety mechanisms.
+
 ## Author
 **Anushka Singh**
-CSE student
+CSE Student
+
+
