@@ -11,7 +11,7 @@ The application is deployed using Azure Static Web Apps with automated CI/CD thr
 ## Tech Stack
 
 ### Frontend
-- React
+- React 
 - Vite
 - CSS
 
@@ -200,23 +200,22 @@ The project includes:
 ```mermaid
 flowchart TD
 
-A[User] --> B[React Frontend]
-B --> C[Azure Static Web Apps]
-C --> D[Azure Function API]
+U[User] --> FE[React Frontend]
 
-D --> E[Agent Orchestrator]
+FE --> SWA[Azure Static Web Apps]
 
-E --> F[Classifier]
-E --> G[Emotional Profile]
-E --> H[Memory System]
-E --> I[Strategy Engine]
+SWA --> API[Azure Function API]
 
-I --> J[Gemini API]
+API --> ORCH[Agent Orchestrator]
 
-J --> K[AI Response]
-K --> B
+ORCH --> CLS[Classifier]
+ORCH --> EMO[Emotional Profile]
+ORCH --> MEM[Conversation Memory]
+ORCH --> MOOD[Mood Tracker]
+ORCH --> STRAT[Strategy Engine]
 
-## Author
+STRAT --> GEMINI[Gemini API]
 
-Anushka Singh  
-Computer Science Engineering Student
+GEMINI --> RESP[AI Generated Response]
+
+RESP --> FE
