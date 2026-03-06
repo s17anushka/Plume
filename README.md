@@ -233,7 +233,7 @@ AGENTS --> GEMINI[Gemini API]
 GEMINI --> RESP[AI Response]
 
 RESP --> FE
-----
+```
 ## Limitations
 
 While Plume demonstrates a modular AI-assisted conversational system, the current implementation has several limitations:
