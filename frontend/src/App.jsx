@@ -2,6 +2,8 @@ import { useState, useEffect, useRef } from "react";
 import "./App.css";
 import ChatMessage from "./components/ChatMessage.jsx";
 import LoadingIndicator from "./components/LoadingIndicator.jsx";
+import CrisisAlert from "./components/CrisisAlert.jsx";
+import ResourcesPanel from "./components/ResourcesPanel.jsx";
 import { useMsal } from "@azure/msal-react";
 import { loginRequest } from "./authConfig";
 
@@ -9,12 +11,13 @@ function App() {
 
   const { instance, accounts } = useMsal();
 
-  const BACKEND_URL = "api/chat";
+  const BACKEND_URL = "/api/chat";
 
   const [conversations, setConversations] = useState([]);
   const [activeChat, setActiveChat] = useState(null);
   const [inputMessage, setInputMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const [isCrisis, setIsCrisis] = useState(false);
 
   const chatEndRef = useRef(null);
 
@@ -119,6 +122,13 @@ function App() {
 
       const data = await res.json();
 
+      // crisis flag from backend
+      if (data.crisis === true) {
+        setIsCrisis(true);
+      } else {
+        setIsCrisis(false);
+      }
+
       updateActiveChat([
         ...updatedMessages,
         { role: "assistant", content: data.response }
@@ -207,6 +217,9 @@ function App() {
 
         </header>
 
+        {/* Crisis alert */}
+        {isCrisis && <CrisisAlert />}
+
         <div className="chat-container">
 
           {activeChat?.messages.map((msg, i) => (
@@ -232,6 +245,9 @@ function App() {
           </button>
 
         </div>
+
+        {/* Resource panel when crisis */}
+        {isCrisis && <ResourcesPanel />}
 
       </div>
 
