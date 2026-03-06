@@ -197,6 +197,8 @@ The project includes:
 ---
 ## System Architecture
 
+## System Architecture
+
 ```mermaid
 flowchart TD
 
@@ -208,14 +210,14 @@ SWA --> API[Azure Function API]
 
 API --> ORCH[Agent Orchestrator]
 
-ORCH --> CLS[Classifier]
-ORCH --> EMO[Emotional Profile]
-ORCH --> MEM[Conversation Memory]
-ORCH --> MOOD[Mood Tracker]
-ORCH --> STRAT[Strategy Engine]
+ORCH --> AGENTS[Agent Modules]
 
-STRAT --> GEMINI[Gemini API]
+AGENTS --> GEMINI[Gemini API]
 
-GEMINI --> RESP[AI Generated Response]
+GEMINI --> RESP[AI Response]
 
 RESP --> FE
+''''
+## Author
+**Anushka Singh**
+CSE student
